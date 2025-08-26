@@ -3,15 +3,15 @@ const mongoose = require("mongoose");
  
 const productSchema = mongoose.Schema({
    name: String,
-   img: String,
+   image: Buffer,
    price: Number,
    discount: {
     type: Number,
     default: 0
    },
-   bgColor: String,
-   pannelColor: String,
-   textColor: String
+   bgcolor: String,
+   panelcolor: String,
+   textcolor: String
 })
 
 module.exports = mongoose.model("product" , productSchema)

@@ -6,8 +6,9 @@ const ownerModel = require("../models/ownerModel");
 
 
 //it is just for the one to get..
-router.get("/", (req, res) => {
-  res.send("hey it's working");
+router.get("/admin", (req, res) => {
+ let success = req.flash("success"); // if you’re using connect-flash
+  res.render("createproducts", { success });
 });
 
 // only allow creating owner in development environment
